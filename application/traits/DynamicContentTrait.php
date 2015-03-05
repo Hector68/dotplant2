@@ -22,7 +22,6 @@ trait DynamicContentTrait
          */
 
         $dynamicCacheKey = 'dynamicCacheKey'.serialize([$object_id, $route, $selections]);
-        $dynamicResult = [];
 
         if (!$dynamicResult = Yii::$app->cache->get($dynamicCacheKey)) {
             $models = DynamicContent::find()
